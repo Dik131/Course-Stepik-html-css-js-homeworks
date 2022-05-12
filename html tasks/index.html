@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Task for Stepik course </title>
+	<style type="text/css"> /*тег style чтобы не писать отдельный css файл*/
+		fieldset{
+			text-align: left; /*расположил надписи в окошках слева*/
+		}
+		.buttons{ 
+			text-align: left; /*расположил кнопки в окошках слева*/
+			margin-top: 1em; /*подвинул пониже */
+		}
+		.MainInformation{
+			margin-top: 5px;
+			margin-bottom: 5px;
+		}
+		label{
+			width: 80px;
+			display: inline-block; /*Делаем так, чтобы input рядом с label был в столбил*/
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<form style=" <!--  атрибут style чтобы не писать отдельный CSS файл -->
+        height: auto;
+        width: 40%;
+        margin-top: 5em;
+        margin-right: auto;
+        margin-left: 30%; /*расположил форму по центру*/
+		"> 
+			<fieldset>
+				<legend>Общая информация</legend>
+				<div class="MainInformation">
+					<label for="FamilyName">Фимилия</label>
+					<input id="FamilyName" type="text" name="FamilyName" placeholder="Иванов"><br>
+				</div>
+				<div class="MainInformation">
+					<label for="FirstName">Имя</label>
+					<input id="FirstName" type="text" name="FirstName" placeholder="Иван"><br>
+				</div>
+				<div class="MainInformation">	
+					<label for="FathersName">Отчество</label>
+					<input id="FathersName" type="text" name="FathersName" placeholder="Иванович"><br>
+				</div>
+				<div class="MainInformation">	
+					<label for="eMail">email</label>
+					<input id="eMail" type="text" name="eMail" placeholder="mail@mail.com"><br>
+				</div>	 
+			</fieldset>
+			<fieldset>
+				<legend>Пол</legend>
+				<div class="MainInformation">
+					<input id="M" type="radio" name="Sex"> <!-- если поставить разные имена, то можно выбрать оба варианта, если одно имя, то надо выбирать из списка варианта. В данном случае, если атрибут name разный, то можно выбрать, как М, так Ж одновременно -->
+					<label for="M">M</label>
+					<input id="F" type="radio" name="Sex">
+					<label for="F">Ж</label>
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>Хобби</legend>
+				<div>
+					<input type="checkbox" name="hobby" id="Painting">
+					<label for="Painting">Рисование</label>
+					<input type="checkbox" name="hobby" id="Reading">
+					<label for="Reading">Чтение</label>
+					<input type="checkbox" name="hobby" id="Knitting">
+					<label for="Knitting">Вязание</label>
+					<input type="checkbox" name="hobby" id="Cooking">
+					<label for="Cooking">Кулинария</label> <!-- В данном случае всё в один div, чтобы оставить всё в одной строчке, не прибегая к дополнительным инструментам -->
+				</div>
+			</fieldset>
+			<div class="buttons">
+				<button type="submit">
+					Отправить
+				</button>
+				<button type="reset">
+					Очистить
+				</button>
+
+			</div>
+		</form>
+	</main>
+</body>
+</html>
